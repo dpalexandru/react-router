@@ -1,9 +1,13 @@
 import React from 'react'
+import Navbar from '../components/NavBar'
+import { NavLink } from 'react-router-dom'
 
 const HomePage = () => {
   return (
-    <div className="container mt-5">
-      <div className="text-center mb-4">
+    <div className="container">
+      <Navbar></Navbar>
+
+      <div className="text-center mb-4 mt-5">
         <h1 className="display-5 fw-bold">Benvenuto!</h1>
       </div>
 
@@ -20,7 +24,9 @@ const HomePage = () => {
           <p className="lead">
             Non perdere l'occasione! Dai un’occhiata ai nostri prodotti in super sconto e approfitta delle offerte di oggi.
           </p>
-          <button className="btn btn-primary btn-lg">Vedi Prodotti</button>
+          <NavLink to="/prodotti" className="btn btn-warning fw-bold ms-2">
+            Lista prodotti!
+          </NavLink>
         </div>
       </div>
     </div>

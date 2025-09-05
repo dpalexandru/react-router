@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import Navbar from '../components/NavBar'
 
 // link recupero dati
 const url = "https://fakestoreapi.com/products"
@@ -14,7 +15,6 @@ const Prodotti = () => {
   useEffect(() => {
     axios.get(url)
       .then(resp => {
-        console.log(resp.data)
         setProdotti(resp.data)
       })
   }, []
@@ -23,7 +23,9 @@ const Prodotti = () => {
 
   return (
     <div className="container">
-      <div className="row">
+      <Navbar></Navbar>
+
+      <div className="row mt-5">
         <h1>I nostri prodotti: </h1>
         {prodotti.map(prodotto => (
           <div className="col-md-4 mb-4" key={prodotto.id}>
