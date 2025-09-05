@@ -1,12 +1,9 @@
 import React from 'react'
-import Navbar from '../components/NavBar'
 import { NavLink } from 'react-router-dom'
 
 const HomePage = () => {
   return (
     <div className="container">
-      <Navbar></Navbar>
-
       <div className="text-center mb-4 mt-5">
         <h1 className="display-5 fw-bold">Benvenuto!</h1>
       </div>

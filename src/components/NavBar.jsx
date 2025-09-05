@@ -8,25 +8,23 @@ const Navbar = () => {
         <NavLink className="navbar-brand fw-bold" to="/">
           Fake Store
         </NavLink>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/">
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/prodotti">
-                Prodotti
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/chisiamo">
-                Chi Siamo
-              </NavLink>
-            </li>
-          </ul>
-        </div>
+        <ul className="navbar-nav ms-auto  ">
+          <li className="nav-item ">
+            <NavLink className="nav-link" to="/">
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/prodotti">
+              Prodotti
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/chisiamo">
+              Chi Siamo
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </nav>
   )
