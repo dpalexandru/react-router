@@ -21,7 +21,7 @@ const Prodotti = () => {
   )
 
   return (
-    <div className="container">
+    <div className="container section-light">
       <div className="row mt-5">
         <h1>I nostri prodotti: </h1>
         {prodotti.map(prodotto => (
@@ -30,7 +30,7 @@ const Prodotti = () => {
             <Link
               to={`/prodotti/${prodotto.id}`}
               state={prodotto}
-              className="text-decoration-none text-dark" // ⬅️ evita sottolineatura/colore blu
+              className="text-decoration-none text-dark"
             >
               <div className="card h-100 shadow-sm">
                 <img

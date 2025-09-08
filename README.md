@@ -19,4 +19,4 @@ Bonus
 Centralizziamo la Navbar usando un componente Layout
 Gestiamo la classe active per i link attivi nella Navbar
 
-## C O N S E G N A  05/09/2025
+## C O N S E G N A  
