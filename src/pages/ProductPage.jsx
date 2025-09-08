@@ -29,6 +29,17 @@ const ProductPage = () => {
   }, [id, navigate]);
 
 
+  // F U N C T I O N 
+  const Next = () => {
+    navigate(`/prodotti/${parseInt(id) + 1}`)
+  }
+
+  const Back = () => {
+    navigate(`/prodotti/${parseInt(id) - 1}`)
+  }
+
+
+
   return (
     <div className="container py-4 section-light d-flex flex-column align-items-center">
       <Card className="shadow-sm">
@@ -61,11 +72,22 @@ const ProductPage = () => {
         </div>
       </Card>
       <div className="d-flex justify-content-between mt-3" style={{ maxWidth: 420 }}>
-        <Button variant="outline-secondary">
-          <i className="bi bi-arrow-left"></i> Back
+        <Button
+          variant="outline-secondary m-3"
+          onClick={Back}
+          disabled={parseInt(id) === 1}
+
+        >
+          <i className="bi bi-arrow-left-circle-fill fs-2"></i>
         </Button>
-        <Button variant="outline-secondary">
-          Next <i className="bi bi-arrow-right"></i>
+
+        <Button
+          variant="outline-secondary m-3"
+          onClick={Next}
+          disabled={parseInt(id) === 20}
+
+        >
+          <i className="bi bi-arrow-right-circle-fill fs-2"></i>
         </Button>
       </div>
     </div>
