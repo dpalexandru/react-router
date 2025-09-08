@@ -4,10 +4,12 @@ import { useParams } from 'react-router-dom'
 import { Card, Button } from "react-bootstrap";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const ProductPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   // U S E S T A T E 
   const [product, setProduct] = useState({})
@@ -16,9 +18,13 @@ const ProductPage = () => {
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${id}`)
       .then(res => {
+        if (!res.data || !res.data.id) {
+          navigate('/prodotti', { replace: true });
+          return;
+        }
         setProduct(res.data);
       })
-  }, [id])
+  }, [id, navigate]);
 
 
   return (
