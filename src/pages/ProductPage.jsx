@@ -5,6 +5,8 @@ import { Card, Button } from "react-bootstrap";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 
 
 const ProductPage = () => {
@@ -28,7 +30,7 @@ const ProductPage = () => {
 
 
   return (
-    <div className="container py-4 section-light d-flex justify-content-center">
+    <div className="container py-4 section-light d-flex flex-column align-items-center">
       <Card className="shadow-sm">
         <div className="row">
           <div className="col-md-4">
@@ -58,6 +60,14 @@ const ProductPage = () => {
           </div>
         </div>
       </Card>
+      <div className="d-flex justify-content-between mt-3" style={{ maxWidth: 420 }}>
+        <Button variant="outline-secondary">
+          <i className="bi bi-arrow-left"></i> Back
+        </Button>
+        <Button variant="outline-secondary">
+          Next <i className="bi bi-arrow-right"></i>
+        </Button>
+      </div>
     </div>
 
 
